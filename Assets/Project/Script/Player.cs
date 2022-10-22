@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
             if (hp > 0)
             {
                 hp = hp - 10;
-                // Debug.Log("ant:" + hp);
+                Debug.Log("ant:" + hp);
                 // ダメージを1秒受けない
                 StartCoroutine("WaitDamage");
             }
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     }
     void loop()
     {
-
+        // タップしたら
     }
 
 }
