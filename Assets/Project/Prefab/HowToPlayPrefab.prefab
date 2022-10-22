@@ -325,8 +325,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6375160522051816446}
+  - component: {fileID: 2715769464373943343}
   m_Layer: 0
-  m_Name: ToTitle_Script
+  m_Name: HowToPlayManager_Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,6 +348,18 @@ Transform:
   m_Father: {fileID: 6375160521198752160}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2715769464373943343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375160522051816447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec967596bb4bf44b29c31e95153ac9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6375160522276138034
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6375160522870423433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2715769464373943343}
+        m_TargetAssemblyTypeName: HowToPlayManager, Project
+        m_MethodName: PushToTitleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8486556347766858652
 GameObject:
   m_ObjectHideFlags: 0
