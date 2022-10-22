@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
                 catchAnt = true;
                 Debug.Log("antだよん");
                 Ant = isHit.collider.gameObject;
+                Ant.GetComponent<AntMove>().catched = true;
                 // この瞬間の座標を取得する
                 mousePositionCache = Input.mousePosition;
             }
@@ -67,8 +68,12 @@ public class GameManager : MonoBehaviour
             if (deleteAnt == true)
             {
                 // TODO: 画面外に飛んでいく
-                // Destroy(Ant);
+                Destroy(Ant);
                 // キャッシュをクリア
+            }
+            else
+            {
+                //Ant.GetComponent<AntMove>().catched = false;
             }
             Ant = null;
             mousePositionCache = new Vector3(0, 0, 0);

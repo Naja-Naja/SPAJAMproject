@@ -25,7 +25,7 @@ public class Utils : MonoBehaviour
 
     }
 
-    List<float> getAntCountPerSec(int divideCount, int antCount)
+    public List<float> getAntCountPerSec(int divideCount, int antCount)
     {
         if (divideCount == 0)
         {
