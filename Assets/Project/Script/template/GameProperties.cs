@@ -19,4 +19,5 @@ public class GameProperties : ScriptableObject
     public GameVisualMode visualmode;
     public GameMode mode;
     public int HP;
+    public int time;
 }
