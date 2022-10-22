@@ -11,7 +11,7 @@ public class CalorieValueCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameProperties.calorie = 60;
     }
 
     // Update is called once per frame
