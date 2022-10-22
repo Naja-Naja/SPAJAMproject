@@ -28,6 +28,10 @@ public class Player : MonoBehaviour
                 // ダメージを1秒受けない
                 StartCoroutine("WaitDamage");
             }
+            else
+            {
+                // TODO: ゲームオーバー演出
+            }
         }
     }
 
