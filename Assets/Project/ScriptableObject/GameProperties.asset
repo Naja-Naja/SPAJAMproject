@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameProperties
   m_EditorClassIdentifier: 
   score: 0
-  calorie: 100
-  visualmode: 0
+  calorie: 3000
+  visualmode: 1
   mode: 0
   HP: 100
