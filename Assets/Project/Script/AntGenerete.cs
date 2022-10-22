@@ -9,10 +9,12 @@ public class AntGenerete : MonoBehaviour
     [SerializeField] GameProperties properties;
     [SerializeField] GameObject ant;
     [SerializeField] GameObject player;
+    [SerializeField] Utils utils;
     private void Start()
     {
         //floatlist‚ð“¾‚é
-        timeList.Add(0.5f);
+        timeList= utils.getAntCountPerSec(split, properties.calorie);
+        //timeList.Add(0.5f);
         StartCoroutine("generate");
     }
     IEnumerator generate()
@@ -23,9 +25,10 @@ public class AntGenerete : MonoBehaviour
             for (int i = 0; i < 60/split; i++)
             {
                 spawnrate = spawnrate + item;
+                Debug.Log(item);
                 while (spawnrate > 1)
                 {
-                    //Instantiate()
+                    Instantiate(ant, generatePos(), Quaternion.identity);
                     Debug.Log("generateant");
                     spawnrate--;
                 }
