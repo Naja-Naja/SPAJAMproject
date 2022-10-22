@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 425986162}
   - component: {fileID: 425986161}
   - component: {fileID: 425986160}
+  - component: {fileID: 425986163}
   m_Layer: 5
   m_Name: donut
   m_TagString: Untagged
@@ -315,6 +316,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425986158}
   m_CullTransparentMesh: 1
+--- !u!114 &425986163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425986158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520616cd09c3d4289ab28560956eb6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 21300000, guid: 18d2575b56a3746ffa6bba4422c8cd72, type: 3}
+  - {fileID: 21300000, guid: 5fc5331b3ca3d407c850910971206cec, type: 3}
+  - {fileID: 21300000, guid: 661a3f4d1a3664c5a9c29a9e4ea62b2b, type: 3}
+  - {fileID: 21300000, guid: 13f005e44b60345d190f3bee10edb034, type: 3}
+  - {fileID: 21300000, guid: a56bb9f74c4e0446e8a41a6ee0ef1d66, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
