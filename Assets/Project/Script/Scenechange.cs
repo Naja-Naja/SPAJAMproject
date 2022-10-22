@@ -11,6 +11,7 @@ public class Scenechange : MonoBehaviour
     void Start()
     {
         button= this.gameObject.GetComponent<Button>();
+        if (button == null) { return; }
         button.onClick.AddListener(ClickScenechange);
     }
     public void ClickScenechange()
