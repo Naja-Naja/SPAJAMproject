@@ -13,7 +13,7 @@ public class Scenechange : MonoBehaviour
         button= this.gameObject.GetComponent<Button>();
         button.onClick.AddListener(ClickScenechange);
     }
-    void ClickScenechange()
+    public void ClickScenechange()
     {
         SceneManager.LoadScene(changeScene);
     }
