@@ -26,7 +26,7 @@ public class CalorieValueCtrl : MonoBehaviour
             TestInputField.text = gameProperties.calorie.ToString();
             //text.text = gameProperties.calorie.ToString();
         }
-        else if(gameProperties.calorie < 0)
+        else if(gameProperties.calorie < 60)
         {
             gameProperties.calorie = 60;
             TestInputField.text = gameProperties.calorie.ToString();
