@@ -174,7 +174,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ReferenceResolution: {x: 480, y: 800}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -684,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   properties: {fileID: 11400000, guid: 015cf51adbda28c4eb12f3311f716b27, type: 2}
   generete: {fileID: 552752644}
+  maxHP: 100
   gameend: 0
   resultpop: 0
   resultWindow: {fileID: 5463284058443171885, guid: 8ce2d75cd6ac7430c839d5c2631fbe76, type: 3}
