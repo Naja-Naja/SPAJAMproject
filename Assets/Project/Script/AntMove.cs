@@ -5,13 +5,14 @@ using UnityEngine;
 public class AntMove : MonoBehaviour
 {
     public GameObject Player;
-    [SerializeField] GameObject PrefabAnt;
     [SerializeField] float speed;
+    public bool catched = false;
 
     GameObject clickedGameObject;
 
     void Start()
     {
+        catched = false;
         CreateObject();
     }
 
@@ -27,6 +28,7 @@ public class AntMove : MonoBehaviour
     }
     void Update()
     {
+        if (catched == true) { return; }
         Move();
     }
 }

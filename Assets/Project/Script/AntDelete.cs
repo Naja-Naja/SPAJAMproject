@@ -29,7 +29,7 @@ public class AntDelete : MonoBehaviour
             if (isHit.collider.CompareTag("Ant"))
             {
                 catchAnt = true;
-                Debug.Log("antだよん");
+                //Debug.Log("antだよん");
                 Ant = isHit.collider.gameObject;
                 // この瞬間の座標を取得する
                 mousePositionCache = Input.mousePosition;
@@ -44,12 +44,12 @@ public class AntDelete : MonoBehaviour
         {
             // Debug.Log(Ant.transform.position);
             var nowPosition = Input.mousePosition;
-             Debug.Log(Camera.main.ScreenToWorldPoint(nowPosition));
+            // Debug.Log(Camera.main.ScreenToWorldPoint(nowPosition));
             Ant.transform.position = Camera.main.ScreenToWorldPoint(nowPosition);
             Ant.transform.position = new Vector3(Ant.transform.position.x, Ant.transform.position.y, 0);
-            Debug.Log(Ant.transform.position);
+            Debug.Log(Vector3.Distance(nowPosition, mousePositionCache));
 
-            if (Vector3.Distance(nowPosition, mousePositionCache) > 0.2)
+            if (Vector3.Distance(nowPosition, mousePositionCache) > 40)
             {
                 // カーソルの座標をとる
                 // 現在座標とカーソル座礁を比較する
@@ -69,6 +69,7 @@ public class AntDelete : MonoBehaviour
             Ant = null;
             mousePositionCache = new Vector3(0, 0, 0);
             catchAnt = false;
+            deleteAnt = false;
 
         }
     }
