@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Utils : MonoBehaviour
 {
-    // // Start is called before the first frame update
+    // Start is called before the first frame update
     // void Start()
     // {
-    //     var test = this.getAntCountPerSec(10, 100);
+    //     var test = this.getAntCountPerSec(60, 240);
     //     UnityEngine.Debug.Log(test);
+    //     float sum = 0;
     //     for (int i = 0; i < test.Count; i++)
     //     {
     //         UnityEngine.Debug.Log(test[i]);
+    //         sum += test[i];
     //     }
+    //     UnityEngine.Debug.Log(sum);
     // }
 
     // // Update is called once per frame
@@ -30,21 +33,19 @@ public class Utils : MonoBehaviour
         }
         // 傾き調整変数 2
         int TILT_PARAM = 2;
-        // 最低出現数
-        int MIN_ANT_COUNT = 1;
         // 一定に出現擦る場合の出現数
-        float CONSTANT_NUM = antCount / divideCount;
+        double CONSTANT_NUM = antCount / divideCount;
 
-        float DELTA_Y = CONSTANT_NUM - MIN_ANT_COUNT;
-        float DELTA_X = divideCount / TILT_PARAM;
-        float TILT = DELTA_Y / DELTA_X;
+        double DELTA_Y = (double)CONSTANT_NUM;
+        double DELTA_X = divideCount / TILT_PARAM;
+        double TILT = (double)DELTA_Y / (double)DELTA_X;
 
         // 1秒間に出現する数
         var result = new List<float>();
         for (int i = 0; i < divideCount; i++)
         {
-            float n = TILT * i + MIN_ANT_COUNT;
-            result.Add(n);
+            double n = (double)TILT * i;
+            result.Add((float)n);
         }
         return result;
     }
