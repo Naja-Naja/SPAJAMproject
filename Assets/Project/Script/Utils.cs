@@ -19,11 +19,11 @@ public class Utils : MonoBehaviour
     //     UnityEngine.Debug.Log(sum);
     // }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
+    // Update is called once per frame
+    void Update()
+    {
 
-    // }
+    }
 
     List<float> getAntCountPerSec(int divideCount, int antCount)
     {
