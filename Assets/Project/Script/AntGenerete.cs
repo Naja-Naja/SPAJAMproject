@@ -10,7 +10,8 @@ public class AntGenerete : MonoBehaviour
     [SerializeField] GameObject ant;
     [SerializeField] GameObject player;
     [SerializeField] Utils utils;
-    private void Start()
+    [SerializeField] GameManager manager;
+    public void CountStart()
     {
         //floatlist‚ð“¾‚é
         timeList= utils.getAntCountPerSec(split, properties.calorie);
@@ -20,12 +21,13 @@ public class AntGenerete : MonoBehaviour
     IEnumerator generate()
     {
         float spawnrate = 0;
+        properties.time = 60;
         foreach (var item in timeList)
         {
             for (int i = 0; i < 60/split; i++)
             {
                 spawnrate = spawnrate + item;
-                Debug.Log(item);
+                //Debug.Log(item);
                 while (spawnrate > 1)
                 {
                     Instantiate(ant, generatePos(), Quaternion.identity);
@@ -33,9 +35,11 @@ public class AntGenerete : MonoBehaviour
                     spawnrate--;
                 }
                 yield return new WaitForSeconds(1f);
+                properties.time--;
             }
         }
         Debug.Log("gameend");
+        manager.gameend = true;
     }
     Vector3 generatePos()
     {
