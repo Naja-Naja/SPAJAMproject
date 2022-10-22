@@ -657,6 +657,7 @@ MonoBehaviour:
   ant: {fileID: 2130425642102429517, guid: a4c9df464ed8f48fe80dd823ff57863e, type: 3}
   player: {fileID: 2066800230}
   utils: {fileID: 552752643}
+  manager: {fileID: 552752646}
 --- !u!114 &552752645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   properties: {fileID: 11400000, guid: 015cf51adbda28c4eb12f3311f716b27, type: 2}
+  generete: {fileID: 552752644}
+  gameend: 0
+  resultWindow: {fileID: 5463284058443171885, guid: 8ce2d75cd6ac7430c839d5c2631fbe76, type: 3}
 --- !u!1 &940115479
 GameObject:
   m_ObjectHideFlags: 0
