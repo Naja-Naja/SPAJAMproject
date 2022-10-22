@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/SimpleScene.unity
     guid: 56674b36d426ac044b9986aac392b172
+  - enabled: 1
+    path: Assets/Project/Scenes/titleScene.unity
+    guid: dc6fb97a55673f94cb9633dd89327a77
+  - enabled: 1
+    path: Assets/Project/Scenes/MainGame.unity
+    guid: 51c4ac86cf8699847994139c9f4044ae
   m_configObjects: {}
