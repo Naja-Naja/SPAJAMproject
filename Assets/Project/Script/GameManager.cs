@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameProperties properties;
     [SerializeField] AntGenerete generete;
-    int maxHP = 100;
+    public int maxHP = 100;
     public bool gameend = false;
     public bool resultpop = false;
     [SerializeField] GameObject resultWindow;
@@ -20,7 +20,9 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        properties.score = properties.calorie * (properties.HP / maxHP);
+       
+        var tmp= (float)properties.calorie * ((float)properties.HP / (float)maxHP);
+        properties.score = (int)tmp;
         if (gameend == true && resultpop == false)
         {
             Instantiate(resultWindow, new Vector3(0, 0, 0), Quaternion.identity);

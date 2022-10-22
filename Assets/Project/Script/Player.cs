@@ -14,18 +14,23 @@ public class Player : MonoBehaviour
     bool isHit;
     void Start()
     {
-        hp = properties.HP;
+        hp = 100;// properties.HP;
+        isHit = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isHit = true;
+        if (isHit == true) { return; }
+
         if (collision.gameObject.tag == "Ant")
         {
+            isHit = true;
             if (hp > 0)
             {
                 hp = hp - 10;
                 Debug.Log("ant:" + hp);
+                properties.HP = hp;
                 // ダメージを1秒受けない
+                Debug.Log("call");
                 StartCoroutine("WaitDamage");
             }
             else
@@ -43,6 +48,10 @@ public class Player : MonoBehaviour
     void loop()
     {
         // タップしたら
+    }
+    private void Update()
+    {
+        Debug.Log("ishit  "+isHit);
     }
 
 }
