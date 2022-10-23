@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class AntMove : MonoBehaviour
 {
     public GameObject Player;
     [SerializeField] float speed;
     public bool catched = false;
+    [SerializeField] AudioClip clip;
 
     GameObject clickedGameObject;
 
@@ -30,5 +32,12 @@ public class AntMove : MonoBehaviour
     {
         if (catched == true) { return; }
         Move();
+    }
+    public void antfly()
+    {
+        float rnd = Random.Range(-5f, 5f);
+        var tmp = new Vector3(rnd, 6, 0);
+        DOTween.To(() => this.transform.position, x => transform.localPosition = x, tmp, 0.3f).SetEase(Ease.Linear).OnComplete(() => Destroy(this.gameObject));
+        AudioManager.SE_Play(clip);
     }
 }
