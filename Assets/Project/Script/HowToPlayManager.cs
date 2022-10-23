@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class HowToPlayManager : MonoBehaviour
 {
+    [SerializeField] GameObject gameObj;
     public void PushToTitleButton()
     {
-        SceneManager.LoadScene("titleScene");
+        //SceneManager.LoadScene("titleScene");
+        Destroy(gameObj);
     }
 }
