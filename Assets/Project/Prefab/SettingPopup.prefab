@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 3967959866642642288}
   - component: {fileID: 178439307839464090}
   - component: {fileID: 6494492590445214363}
+  - component: {fileID: 1759974328499637259}
   m_Layer: 5
   m_Name: ToTitleButton
   m_TagString: Untagged
@@ -614,6 +615,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1759974328499637259}
+        m_TargetAssemblyTypeName: ButtonSE, Project
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1759974328499637259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072595839378442491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1d487bb5ab1914db355519db8b5332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: ccd103fb3ac905f469b9fcb5476b5a46, type: 3}
 --- !u!1 &4736540121488898659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea70ad1e502a4561a3cc82e98891981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObj: {fileID: 1204910144156140087}
 --- !u!1 &8718190168683686417
 GameObject:
   m_ObjectHideFlags: 0
