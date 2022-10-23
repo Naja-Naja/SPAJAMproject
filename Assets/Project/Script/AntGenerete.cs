@@ -36,6 +36,7 @@ public class AntGenerete : MonoBehaviour
                 }
                 yield return new WaitForSeconds(1f);
                 properties.time--;
+                if (properties.HP <= 0) { yield break; }
             }
         }
         Debug.Log("gameend");
