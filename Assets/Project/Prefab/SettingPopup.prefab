@@ -340,7 +340,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4935431030560816917}
   m_HandleRect: {fileID: 4059569231596719038}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.2
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4902644871040828505}
   m_HandleRect: {fileID: 4587604997107908889}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.2
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1282,6 +1282,7 @@ GameObject:
   - component: {fileID: 1859088819215529769}
   - component: {fileID: 6691332899930859570}
   - component: {fileID: 111322438687741068}
+  - component: {fileID: 8834861400473756516}
   m_Layer: 5
   m_Name: SettingTextsBackground
   m_TagString: Untagged
@@ -1351,6 +1352,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8834861400473756516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8910528925857682757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5f9ee86e9a51d4d94be286e1f13b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audiomixer: {fileID: 24100000, guid: 62e5677c4629b7e4f9955afbf3ff60ae, type: 2}
+  BGM_slider: {fileID: 2023083224022524942}
+  SE_slider: {fileID: 6341404232877357033}
 --- !u!1 &9014182420275007441
 GameObject:
   m_ObjectHideFlags: 0
