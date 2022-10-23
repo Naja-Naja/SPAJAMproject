@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-       
+
+        if (properties.HP <= 0) { gameend = true; }
         var tmp= (float)properties.calorie * ((float)properties.HP / (float)maxHP);
         properties.score = (int)tmp;
         if (gameend == true && resultpop == false)

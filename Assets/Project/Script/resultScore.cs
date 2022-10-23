@@ -9,6 +9,6 @@ public class resultScore : MonoBehaviour
     [SerializeField] GameProperties properties;
     void Start()
     {
-        text.text = properties.score.ToString();
+        text.text = "Score:\n"+properties.score.ToString()+"/"+properties.calorie.ToString();
     }
 }
