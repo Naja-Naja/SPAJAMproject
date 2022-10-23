@@ -63,7 +63,8 @@ public class AntDelete : MonoBehaviour
             if (deleteAnt == true)
             {
                 // TODO: 画面外に飛んでいく
-                Destroy(Ant);
+                Ant.GetComponent<AntMove>().antfly();
+                //Destroy(Ant);
                 // キャッシュをクリア
             }
             Ant = null;
