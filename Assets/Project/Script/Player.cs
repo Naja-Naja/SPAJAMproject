@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private int hp;
 
     bool isHit;
+    [SerializeField] AudioClip clip;
     void Start()
     {
         hp = 100;// properties.HP;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
             if (hp > 0)
             {
                 hp = hp - 10;
+                AudioManager.SE_Play(clip);
                 Debug.Log("ant:" + hp);
                 properties.HP = hp;
                 // ダメージを1秒受けない

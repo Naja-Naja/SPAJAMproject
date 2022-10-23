@@ -15,6 +15,7 @@ public class AntMove : MonoBehaviour
     void Start()
     {
         catched = false;
+        goal = false;
         CreateObject();
     }
 
@@ -30,7 +31,7 @@ public class AntMove : MonoBehaviour
     }
     void Update()
     {
-        if (catched == true) { goal = false; return; }
+       // if (catched == true) { return; }
         if (goal == true) { return; }
         Move();
     }
@@ -41,7 +42,7 @@ public class AntMove : MonoBehaviour
         DOTween.To(() => this.transform.position, x => transform.localPosition = x, tmp, 0.3f).SetEase(Ease.Linear).OnComplete(() => Destroy(this.gameObject));
         AudioManager.SE_Play(clip);
     }
-    bool goal = false;
+   public bool goal = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

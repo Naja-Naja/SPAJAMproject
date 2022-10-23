@@ -29,8 +29,11 @@ public class AntDelete : MonoBehaviour
             if (isHit.collider.CompareTag("Ant"))
             {
                 catchAnt = true;
+
+
                 //Debug.Log("antだよん");
                 Ant = isHit.collider.gameObject;
+                Ant.GetComponent<AntMove>().goal=false;
                 // この瞬間の座標を取得する
                 mousePositionCache = Input.mousePosition;
             }
@@ -67,6 +70,7 @@ public class AntDelete : MonoBehaviour
                 //Destroy(Ant);
                 // キャッシュをクリア
             }
+            //Ant.GetComponent<AntMove>().catched = false;
             Ant = null;
             mousePositionCache = new Vector3(0, 0, 0);
             catchAnt = false;
