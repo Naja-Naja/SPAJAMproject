@@ -51,6 +51,8 @@ MonoBehaviour:
   speed: 2
   catched: 0
   clip: {fileID: 8300000, guid: 338f04aded9151044a053ef1175bc825, type: 3}
+  collider2d: {fileID: 2130425642102429513}
+  goal: 0
 --- !u!58 &2130425642102429513
 CircleCollider2D:
   m_ObjectHideFlags: 0

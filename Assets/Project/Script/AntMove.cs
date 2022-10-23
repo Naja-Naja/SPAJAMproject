@@ -9,6 +9,7 @@ public class AntMove : MonoBehaviour
     [SerializeField] float speed;
     public bool catched = false;
     [SerializeField] AudioClip clip;
+    [SerializeField] Collider2D collider2d;
 
     GameObject clickedGameObject;
 
@@ -41,6 +42,7 @@ public class AntMove : MonoBehaviour
         var tmp = new Vector3(rnd, 6, 0);
         DOTween.To(() => this.transform.position, x => transform.localPosition = x, tmp, 0.3f).SetEase(Ease.Linear).OnComplete(() => Destroy(this.gameObject));
         AudioManager.SE_Play(clip);
+        collider2d.enabled = false;
     }
    public bool goal = false;
     private void OnTriggerEnter2D(Collider2D collision)
