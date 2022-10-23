@@ -13,6 +13,7 @@ public class PlayerDelete : MonoBehaviour
 
     GameObject Player;
     GameObject Ant;
+    [SerializeField] GameObject deletefield;
 
     Vector3 mousePositionCache;
     private MeshCollider meshCollider;
@@ -38,19 +39,19 @@ public class PlayerDelete : MonoBehaviour
         }
 
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ant")
-        {
-            Ant.gameObject.tag = collision.gameObject.tag;
-            Debug.Log("Collision Stay");
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Ant")
+    //    {
+    //        Ant.gameObject.tag = collision.gameObject.tag;
+    //        Debug.Log("Collision Stay");
 
-            // TODO:タップした瞬間にプレイヤーの範囲に見えないコリジョンを発生させて
-            // コリジョンにenterしてきたオブジェクトを見る
-            // Destroyの引数にthis.1 いち
-            // それに触れたアントを
-        }
-    }
+    //        // TODO:タップした瞬間にプレイヤーの範囲に見えないコリジョンを発生させて
+    //        // コリジョンにenterしてきたオブジェクトを見る
+    //        // Destroyの引数にthis.1 いち
+    //        // それに触れたアントを
+    //    }
+    //}
 
     void Update()
     {
@@ -58,12 +59,15 @@ public class PlayerDelete : MonoBehaviour
 
         if (catchPlayer == true)
         {
+            var tmp = Instantiate(deletefield, this.transform.position, Quaternion.identity);
+            Destroy(tmp, 0.1f);
+            catchPlayer = false;
             // TODO: プレイヤーと接触しているオブジェクトを取得し、
             // AntだったらAntのtransform.positionを現在位置から-x(?)する
-            if (Player.transform.position == Ant.transform.position)
-            {
-                Player.transform.position = new Vector3(0, 0, 0);
-            }
+            //if (Player.transform.position == Ant.transform.position)
+            //{
+            //    Player.transform.position = new Vector3(0, 0, 0);
+            //}
 
             //     var nowPosition = Input.mousePosition;
             //     Player.transform.position = Camera.main.ScreenToWorldPoint(nowPosition);
@@ -76,18 +80,18 @@ public class PlayerDelete : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonUp(0) == true)
-        {
-            if (deleteAnt == true)
-            {
-                Destroy(Player);
-                // キャッシュをクリア
-            }
-            Player = null;
-            mousePositionCache = new Vector3(0, 0, 0);
-            catchPlayer = false;
-            deleteAnt = false;
-        }
+        //if (Input.GetMouseButtonUp(0) == true)
+        //{
+        //    if (deleteAnt == true)
+        //    {
+        //        Destroy(Player);
+        //        // キャッシュをクリア
+        //    }
+        //    Player = null;
+        //    mousePositionCache = new Vector3(0, 0, 0);
+        //    catchPlayer = false;
+        //    deleteAnt = false;
+        //}
     }
 
 }

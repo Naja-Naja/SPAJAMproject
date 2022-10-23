@@ -1189,6 +1189,7 @@ GameObject:
   - component: {fileID: 2066800234}
   - component: {fileID: 2066800236}
   - component: {fileID: 2066800235}
+  - component: {fileID: 2066800237}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1291,7 +1292,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.08
 --- !u!50 &2066800235
 Rigidbody2D:
   serializedVersion: 4
@@ -1326,6 +1327,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   properties: {fileID: 11400000, guid: 015cf51adbda28c4eb12f3311f716b27, type: 2}
+--- !u!114 &2066800237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066800230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f617cf2b2404e70bb7c27e3b6cb852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deletefield: {fileID: 4728060893433679112, guid: bfeb028d2ab0611408b81615ed34303e, type: 3}
 --- !u!1001 &2067369368
 PrefabInstance:
   m_ObjectHideFlags: 0
