@@ -18,17 +18,12 @@ public class ChangeSpaOrAnt : MonoBehaviour
             var random = new System.Random();
             spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = sprite[random.Next(1, 6)];
+            this.transform.localScale = new Vector3(0.1f, 0.1f, 1);
         }
         else
         {
             spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = sprite[0];
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
