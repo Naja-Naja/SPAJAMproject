@@ -33,7 +33,10 @@ public class AntDelete : MonoBehaviour
 
                 //Debug.Log("antだよん");
                 Ant = isHit.collider.gameObject;
-                Ant.GetComponent<AntMove>().goal=false;
+                var tmp = Ant.GetComponent<AntMove>();
+                tmp.goal = false;
+                tmp.collider2d.enabled = false;
+                
                 // この瞬間の座標を取得する
                 mousePositionCache = Input.mousePosition;
             }
@@ -63,10 +66,12 @@ public class AntDelete : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) == true)
         {
+            var tmp = Ant.GetComponent<AntMove>();
+            tmp.collider2d.enabled = true;
             if (deleteAnt == true)
             {
                 // TODO: 画面外に飛んでいく
-                Ant.GetComponent<AntMove>().antfly();
+                tmp.antfly();
                 //Destroy(Ant);
                 // キャッシュをクリア
             }

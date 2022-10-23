@@ -9,7 +9,7 @@ public class AntMove : MonoBehaviour
     [SerializeField] float speed;
     public bool catched = false;
     [SerializeField] AudioClip clip;
-    [SerializeField] Collider2D collider2d;
+    public  Collider2D collider2d;
 
     GameObject clickedGameObject;
 
