@@ -30,7 +30,8 @@ public class AntMove : MonoBehaviour
     }
     void Update()
     {
-        if (catched == true) { return; }
+        if (catched == true) { goal = false; return; }
+        if (goal == true) { return; }
         Move();
     }
     public void antfly()
@@ -39,5 +40,15 @@ public class AntMove : MonoBehaviour
         var tmp = new Vector3(rnd, 6, 0);
         DOTween.To(() => this.transform.position, x => transform.localPosition = x, tmp, 0.3f).SetEase(Ease.Linear).OnComplete(() => Destroy(this.gameObject));
         AudioManager.SE_Play(clip);
+    }
+    bool goal = false;
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("call");
+            goal = true;
+        }
+      
     }
 }
